@@ -3,9 +3,13 @@ Nombre: El Misterio de Albus.
 Por: Luis Alberto Salazar y Juan David Aycardi.
 """
 
+from os import system
+import time
+
 def main():
     flag = True
     while(flag):
+        system("cls")
         print("==================================================================")
         print("EL MISTERIO")
         print("DE")
@@ -24,8 +28,12 @@ def main():
             x = int(input("¿Que opcion desea seleccionar?: "))
         
         print("")
-        if(x == 1): print("Iniciando una nueva partida porque aun no hay funciones")
-        elif(x == 2): print("Continuando partida guardada")
+        if(x == 1):
+            print("Iniciando una nueva partida porque aun no hay funciones")
+            time.sleep(5)
+        elif(x == 2):
+            print("Continuando partida guardada")
+            time.sleep(5)
         else:
             print("==================================================================")
             print("Gracias por jugar, esperamos que su experiencia haya sido grata")
