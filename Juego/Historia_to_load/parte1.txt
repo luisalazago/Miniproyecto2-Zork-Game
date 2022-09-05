@@ -1,1 +1,27 @@
-Parte 1
+Esta es la historia de como un muchacho descubre la historia que marcaría su vida para siempre,
+pues ¿cómo se sentiría si hubira vivido engañado gran parte de su vida?...
+
+Jake, es un muchacho que nació en el pueblo de Alderaan, un pueblo bastante frío, silencioso y 
+con una población bastante baja, cerca de las 5000 personas. El medio de transporte eran unos 
+cuantos buses que podían cubrir todas las calles de la ciudad y funcionan las 24 horas, es muy 
+fácil encontrarse con las personas que conozcas en cualquier momento, a veces les podía resultar 
+bastante incómodo, ya que cuando se peleaban se podían encontrar en cualquier parte del pueblo.
+
+Esta historia se centrará en Jake y en el misterio que esconde la muerte de su abuelo. Jake 
+creció sin padres y fue criado por sus abuelos, cumplidos los 18 años se fue del pueblo a estudiar 
+criminalística con especializaciones en peritaje forense. Un día, recibió la noticia de la muerte 
+de su abuelo, pero nota, según el acta de defunción, que hay incoherencias en los registros, cosas 
+que no cuadran según el estado de muerte.
+
+======================================================================================================
+Comando disponibles: go [name], stay
+======================================================================================================
+
++
+Jake decide volver a Alderaan después de 7 años y descubrir qué pasó realmente con la muerte de su 
+abuelo Albus.
+-
+Jake decide llevar la muerte de su abuelo de la mejor manera, siguió su vida tal cual como la llevaba,
+pero con el dolor de la muerte de su abuelo, y con la seguridad de que nunca tendría algo más que los
+relacione con Alderaan...
+

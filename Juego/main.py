@@ -2,6 +2,7 @@
 Nombre: El Misterio de Albus.
 Por: Luis Alberto Salazar y Juan David Aycardi.
 """
+from parte1 import stateMachine
 from os import system
 import time
 import sys
@@ -38,6 +39,7 @@ def main():
         if(x == 1):
             print("Iniciando una nueva partida porque aun no hay funciones")
             time.sleep(5)
+            stateMachine()
         elif(x == 2):
             print("Continuando partida guardada")
             time.sleep(5)
