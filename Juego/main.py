@@ -37,7 +37,8 @@ def main():
         
         print("")
         if(x == 1):
-            print("Iniciando una nueva partida porque aun no hay funciones")
+            print("Iniciando una nueva partida...")
+            print("")
             time.sleep(5)
             stateMachine()
         elif(x == 2):
