@@ -17,4 +17,20 @@ que no cuadran según el estado de muerte.
 Comando disponibles: go [name], stay
 ======================================================================================================
 
-Esta es otra prueba a ver si funciona debería imprimir el texto bien.
+Cuando Jake llegó al pueblo, se encontró con sus viejos amigos, muchos de ellos lo saludaron y 
+le expresaron sus condolencias, pero a Jake no le importaba si eran empáticos, el solo estaba de 
+vuelta por su abuelo. Su “mejor amiga” Martha, le dijo que se podía quedar con ella el tiempo que se 
+fuera a quedar en el pueblo, él agradecido con ella aceptó. Cuando llegaron a la casa de ella, él se 
+quedó en el sofá durmiendo, pero al no poder conciliar el sueño, Jake decide salir a caminar al viejo 
+parque del pueblo, cuando se sentó en su banca favorita, recordó sus momento de joven con sus amigos, 
+como jugaban con la nieve o con el hielo.
+
+De la nada, Jake escuchó un ruido, rápidamente se fijó que era una persona un poco alta y de 
+contextura delgada, de seguro un hombre joven, esa figura se fué corriendo del lugar y Jake no sabía
+si volver a casa o perseguir al extraño
+
+======================================================================================================
+Comando disponibles: follow extraño, return home
+======================================================================================================
+
+
