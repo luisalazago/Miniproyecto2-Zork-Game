@@ -33,4 +33,9 @@ si volver a casa o perseguir al extraño
 Comando disponibles: follow extraño, return home
 ======================================================================================================
 
+En la persecución Jake decide si tomar o no un atajo que él conocía.
+
+======================================================================================================
+Comando disponibles: follow extraño, return home
+======================================================================================================
 
