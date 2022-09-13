@@ -9,6 +9,8 @@ import time
 comandos_niveles = [["go", "stay"], []]
 formato_comandos = {"go": ["name"], "stay": []}
 contador = 0
+contador_derecha = 0
+contador_izquierda = 0
 
 def evaluar_comando(comando, texto):
     # Primero se evalua si se envio el formato adecuado del comando por parte del usuario.
@@ -18,58 +20,52 @@ def evaluar_comando(comando, texto):
         if(condiciones == "name" and comando[1] != texto): veracidad = True
     return veracidad
 
-def cargarTexto(des):
+# Funciones para cargar el texto de los archivos
+def cargarTexto():
     global contador
     jugar = 0
-    texto = 0
-    camino = des
-    cam1 = 0
-    cam2 = 0
-    archivo = open("../Juego/Historia_to_load/parte1.txt", "r")
+    archivo = open("../Juego/Historia_to_load/parte1/parte1.txt", "r", encoding = 'utf-8')
     archivo = archivo.readlines()
-    if(contador):
-        archivo = archivo[contador:]
-        #print(archivo)
-        #x = input()
+    archivo = archivo[contador:]
     for linea in archivo:
         contador += 1
-        if(camino == 0):
-            if(linea[0] == "="):
-                jugar += 1
-                if(jugar == 2):
-                    print(linea)
-                    break
-            print(linea)  
-        elif(camino == 1):
-            if(linea[0] == "+"): cam1 = 1
-            elif(cam1):
-                if(linea[0] == "-"):
-                    texto = 1
-                    break
+        if(linea[0] == "="):
+            jugar += 1
+            if(jugar == 2):
                 print(linea)
-        else:
-            if(linea[0] == "-"): cam2 = 1
-            elif(cam2):
-                if(linea == "\n"):
-                    texto = 1
-                    break
-                print(linea)
-    
-    if(texto):
-        archivo = archivo[contador:]
-        print(archivo)
-        for linea in archivo:
-            contador += 1
-            if(linea == "."): break
-    print(contador)
+                break
+        print(linea)
+    contador += 1
 
+def cargarTextoDerecha():
+    global contador_derecha
+    archivo = open("../Juego/Historia_to_load/parte1/decision_derecha.txt", "r", encoding = 'utf-8')
+    archivo = archivo.readlines()
+    archivo = archivo[contador_derecha:]
+    for linea in archivo:
+        contador_derecha += 1
+        if(linea[0] == "+"): break
+        print(linea)
+    contador_derecha += 1
+    
+def cargarTextoIzquierda():
+    global contador_izquierda
+    archivo = open("../Juego/Historia_to_load/parte1/decision_izquierda.txt", "r", encoding = 'utf-8')
+    archivo = archivo.readlines()
+    archivo = archivo[contador_izquierda:]
+    for linea in archivo:
+        contador_izquierda += 1
+        if(linea[0] == "-"): break
+        print(linea)
+    contador_izquierda += 1
+
+# Función principal
 def stateMachine():
     state = 1
-    contador = 0
     end = True
     while(end):
         if(state == 1):
-            cargarTexto(0)
+            cargarTexto()
             x = input("/> ")
             x = x.lower().split()
             while(x[0] not in comandos_niveles[0] or evaluar_comando(x, "alderaan")):
@@ -79,11 +75,11 @@ def stateMachine():
             if(x[0] == "go"):
                 state = 2
                 print("")
-                cargarTexto(1)
+                cargarTextoIzquierda()
                 time.sleep(6)
             elif(x[0] == "stay"):
                 end = False
-                cargarTexto(2)
+                cargarTextoDerecha()
                 time.sleep(10)
                 system("cls")
                 print("======================================================================================================")
@@ -93,7 +89,7 @@ def stateMachine():
                 print("======================================================================================================")
                 time.sleep(7)
         elif(state == 2):
-            cargarTexto(0)
+            cargarTexto()
             x = input("/> ")
             x = x.lower().split()
             while(x[0] not in comandos_niveles[0] or len(x) == 1 or x[1] != "alderaan"):
