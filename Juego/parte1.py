@@ -75,10 +75,13 @@ def cargarTexto():
         contador += 1
         if(linea[0] == "="):
             jugar += 1
+            print(linea)
             if(jugar == 2):
-                print(linea)
                 break
-        dprint(linea)
+        elif(jugar == 0):
+            dprint(linea)
+        elif(jugar == 1):
+            print(linea)
     contador += 1
 
 def cargarTextoDerecha():
