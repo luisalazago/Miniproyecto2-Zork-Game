@@ -6,17 +6,19 @@ from parte1 import stateMachine
 from os import system
 import time
 import sys
+from OpenAl import *
 
 def dprint(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.15)
+        time.sleep(0.17)
     print()
 
 def main():
     flag = True
     while(flag):
+        sound(0)
         system("cls")
         print("==================================================================")
         dprint("EL MISTERIO")

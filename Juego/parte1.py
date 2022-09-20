@@ -5,6 +5,7 @@ Codificación del Misterio de Albus PARTE 1
 from distutils.errors import LibError
 from os import system
 import time
+from OpenAl import *
 
 # Variables Globales
 comandos_niveles = [
@@ -21,6 +22,13 @@ contador = 0
 contador_derecha = 0
 contador_izquierda = 0
 
+def dprint(s):
+    for c in s:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(0.035)
+    
+
 # Funciones para el final
 def imprimirFinal():
     """
@@ -28,9 +36,9 @@ def imprimirFinal():
     """
     system("cls")
     print("======================================================================================================")
-    print("FIN DEL JUEGO.")
-    print("Esperamos que te haya gustado, recuerda que hay más de un solo final, puedes volver a iniciar y")
-    print("recorrer todos los finales que tiene el juego.")
+    dprint("FIN DEL JUEGO.")
+    dprint("Esperamos que te haya gustado, recuerda que hay más de un solo final, puedes volver a iniciar y")
+    dprint("recorrer todos los finales que tiene el juego.")
     print("======================================================================================================")
     time.sleep(7)
 
@@ -70,7 +78,7 @@ def cargarTexto():
             if(jugar == 2):
                 print(linea)
                 break
-        print(linea)
+        dprint(linea)
     contador += 1
 
 def cargarTextoDerecha():
@@ -82,11 +90,11 @@ def cargarTextoDerecha():
     archivo = open("../Juego/Historia_to_load/parte1/decision_derecha.txt", "r", encoding = 'utf-8')
     archivo = archivo.readlines()
     archivo = archivo[contador_derecha:]
-    print("")
+    dprint("")
     for linea in archivo:
         contador_derecha += 1
         if(linea[0] == "+"): break
-        print(linea)
+        dprint(linea)
 
 def cargarTextoIzquierda():
     """
@@ -96,11 +104,11 @@ def cargarTextoIzquierda():
     archivo = open("../Juego/Historia_to_load/parte1/decision_izquierda.txt", "r", encoding = 'utf-8')
     archivo = archivo.readlines()
     archivo = archivo[contador_izquierda:]
-    print("")
+    dprint("")
     for linea in archivo:
         contador_izquierda += 1
         if(linea[0] == "-"): break
-        print(linea)
+        dprint(linea)
 
 # Funciones para jugar
 def juego(state):
@@ -118,7 +126,7 @@ def juego(state):
             for comando in comandos_niveles[state - 1]:
                 if(x[0] == comando): veracidad = evaluar_comando(x)
         if(not veracidad): break
-        print("Comando no reconocido.")
+        dprint("Comando no reconocido.")
         x = input("/> ")
         x = x.lower().split()
     return x
@@ -139,18 +147,21 @@ def stateMachine():
     end = True
     while(end):
         if(state == 1):
+            sound(1)
             comando = juego(state)
             print("")
             if(comando[0] == "go"):
+                sound(2)
                 state = 2
                 cargarTextoIzquierda()
-                time.sleep(6)
+                time.sleep(16)
             elif(comando[0] == "stay"):
                 end = False
                 cargarTextoDerecha()
                 time.sleep(10)
                 imprimirFinal()
         elif(state == 2):
+            sound(3)
             comando = juego(state)
             print("")
             if(comando[0] == "follow"):

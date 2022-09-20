@@ -1,20 +1,20 @@
-Esta es la historia de como un muchacho descubre la historia que marcaría su vida para siempre,
-pues ¿cómo se sentiría si hubira vivido engañado gran parte de su vida?...
+Esta es la historia de como un joven descubre los acontecimientos que marcarían su vida para siempre,
+pues ¿cómo se sentiría si hubiera vivido engañado desde que tiene memoria?...
 
-Jake, es un muchacho que nació en el pueblo de Alderaan, un pueblo bastante frío, silencioso y 
-con una población bastante baja, cerca de las 5000 personas. El medio de transporte eran unos 
-cuantos buses que podían cubrir todas las calles de la ciudad y funcionan las 24 horas, es muy 
-fácil encontrarse con las personas que conozcas en cualquier momento, a veces les podía resultar 
-bastante incómodo, ya que cuando se peleaban se podían encontrar en cualquier parte del pueblo.
+Jake es un muchacho que nació en el pueblo de Alderaan, un pueblo bastante frío, silencioso y 
+con una población bastante baja, cerca de las 5000 personas. El medio de transporte principal eran 
+unos cuantos buses que podían cubrir todas las calles de la ciudad y funcionan las 24 horas. Era 
+muy fácil encontrarse con las personas que conocías en cualquier momento, y, a veces, les podía resultar 
+bastante incómodo, ya que cuando se peleaban era inevitable verlos en cualquier parte del pueblo.
 
 Esta historia se centrará en Jake y en el misterio que esconde la muerte de su abuelo. Jake 
-creció sin padres y fue criado por sus abuelos, cumplidos los 18 años se fue del pueblo a estudiar 
-criminalística con especializaciones en peritaje forense. Un día, recibió la noticia de la muerte 
-de su abuelo, pero nota, según el acta de defunción, que hay incoherencias en los registros, cosas 
-que no cuadran según el estado de muerte.
+creció sin padres y fue criado por sus abuelos. Cumplidos los 18 años se fue del pueblo a estudiar 
+criminalística con especializaciones en peritaje forense. Un día, recibió la noticia de que su abuelo 
+había fallecido, pero nota, según el acta de defunción, que hay incoherencias en los registros, cosas 
+que no cuadran según el estado de muerte...
 
 ======================================================================================================
-Comando disponibles: go [name], stay
+Comandos disponibles: go [name], stay
 ======================================================================================================
 
 Cuando Jake llegó al pueblo, se encontró con sus viejos amigos, muchos de ellos lo saludaron y 
@@ -30,13 +30,13 @@ contextura delgada, de seguro un hombre joven, esa figura se fué corriendo del 
 si volver a casa o perseguir al extraño
 
 ======================================================================================================
-Comando disponibles: follow guy, return home
+Comandos disponibles: follow guy, return home
 ======================================================================================================
 
 En la persecución Jake decide si tomar o no un atajo que él conocía.
 
 ======================================================================================================
-Comando disponibles: take atajo, straight
+Comandos disponibles: take atajo, straight
 ======================================================================================================
 
 Jake decidió ir a la vieja panadería del pueblo, dicha panadería la estableció una familia de
@@ -47,7 +47,7 @@ como si ocultara algo, incluso parecía que le quería decir algo a Jake pero no
 decide si dejarlo pasar o enviarle un mensaje una servilleta.
 
 ======================================================================================================
-Comando disponibles: send message, go home
+Comandos disponibles: send message, go home
 ======================================================================================================
 
 Para
