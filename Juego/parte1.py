@@ -157,7 +157,7 @@ def stateMachine():
                 sound(2)
                 state = 2
                 cargarTextoIzquierda()
-                time.sleep(16)
+                time.sleep(11)
             elif(comando[0] == "stay"):
                 end = False
                 cargarTextoDerecha()
@@ -167,6 +167,7 @@ def stateMachine():
             sound(3)
             comando = juego(state)
             print("")
+            sound(4)  
             if(comando[0] == "follow"):
                 state = 3
                 cargarTextoIzquierda()
