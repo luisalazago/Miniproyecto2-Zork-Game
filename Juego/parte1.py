@@ -16,13 +16,16 @@ formato_comandos = {
     "follow": [["guy"], 1], "return": [["home"], 1],
     "send": [["message"], 1], "take": [["atajo"], 1],
     "straight": [[], 0]
-}
+} # El formato de los comandos tiene los comandos y una pareja de las palabras que se deben colocar y la cantida de palabras que vienen después de comando que es el entero.
 contador = 0
 contador_derecha = 0
 contador_izquierda = 0
 
 # Funciones para el final
 def imprimirFinal():
+    """
+    Esta función imprime el final en caso de que se llegue a un final del juego.
+    """
     system("cls")
     print("======================================================================================================")
     print("FIN DEL JUEGO.")
@@ -32,11 +35,18 @@ def imprimirFinal():
     time.sleep(7)
 
 def evaluar_comando(comando):
-    # Primero se evalua si se envio el formato adecuado del comando por parte del usuario.
+    """
+    Esta función permite verificar que el comando ingresado sea correcto tanto
+    sintácticamente como semánticamente. Se verifica si el comando no debe tener
+    más palabras después de la principal, se verifica si se envian la cantidad
+    de palabras correctas y por último se verifica si las palabras después
+    son las correctas.
+
+    Retorna verdadero si hay un error y retorna falso cuando no.
+    """
     ans = None
     if(not formato_comandos[comando[0]][1]): ans = False
-    elif(formato_comandos[comando[0]][1] + 1 != len(comando)):
-        ans = True
+    elif(formato_comandos[comando[0]][1] + 1 != len(comando)): ans = True
     else:
         ans = False
         if(not comando[1] in formato_comandos[comando[0]][0]): ans = True
@@ -44,6 +54,10 @@ def evaluar_comando(comando):
 
 # Funciones para cargar el texto de los archivos
 def cargarTexto():
+    """
+    Esta función permite cargar el texto de la historia principal, sin
+    los caminos que se tomen.
+    """
     global contador
     jugar = 0
     archivo = open("../Juego/Historia_to_load/parte1/parte1.txt", "r", encoding = 'utf-8')
@@ -60,6 +74,10 @@ def cargarTexto():
     contador += 1
 
 def cargarTextoDerecha():
+    """
+    Esta función permite cargar las decisiones que se tomen por el
+    camino derecho.
+    """
     global contador_derecha
     archivo = open("../Juego/Historia_to_load/parte1/decision_derecha.txt", "r", encoding = 'utf-8')
     archivo = archivo.readlines()
@@ -71,6 +89,9 @@ def cargarTextoDerecha():
         print(linea)
 
 def cargarTextoIzquierda():
+    """
+    Esta función permite cargar la historia por el camino izquierdo.
+    """
     global contador_izquierda
     archivo = open("../Juego/Historia_to_load/parte1/decision_izquierda.txt", "r", encoding = 'utf-8')
     archivo = archivo.readlines()
@@ -83,6 +104,11 @@ def cargarTextoIzquierda():
 
 # Funciones para jugar
 def juego(state):
+    """
+    Esta función es la que recive los comandos y los verifica en caso que
+    estén malos, sino retorna el comando y se pasa a verificar en la
+    máquina de estados.
+    """
     cargarTexto()
     x = input("/> ")
     x = x.lower().split()
@@ -99,6 +125,14 @@ def juego(state):
 
 # Función principal
 def stateMachine():
+    """
+    Esta función permite simular la máquina de estados de todo el
+    juego, los states no son los nodos, solo son estados que fueron
+    determinados por el programador según los nodos que se avanzaban
+    en la historia, es decir, cada estado necesariamente no debe
+    representar un solo nodo, puede representar varios según como
+    se vaya a procesar la historia, esto puede variar.
+    """
     global contador, contador_izquierda, contador_derecha
     contador, contador_izquierda, contador_derecha = 0, 0, 0
     state = 1
@@ -106,9 +140,9 @@ def stateMachine():
     while(end):
         if(state == 1):
             comando = juego(state)
+            print("")
             if(comando[0] == "go"):
                 state = 2
-                print("")
                 cargarTextoIzquierda()
                 time.sleep(6)
             elif(comando[0] == "stay"):
@@ -118,9 +152,9 @@ def stateMachine():
                 imprimirFinal()
         elif(state == 2):
             comando = juego(state)
+            print("")
             if(comando[0] == "follow"):
                 state = 3
-                print("")
                 cargarTextoIzquierda()
                 time.sleep(6)
             elif(comando[0] == "return"):
@@ -130,6 +164,7 @@ def stateMachine():
                 imprimirFinal()
         elif(state == 3):
             comando = juego(state)
+            print("")
             if(comando[0] == "take"):
                 cargarTextoIzquierda()
                 time.sleep(30)
@@ -139,7 +174,14 @@ def stateMachine():
             state = 4
         elif(state == 4):
             comando = juego(state)
+            print("")
             if(comando[0] == "go"):
                 cargarTextoDerecha()
             elif(comando[0] == "send"):
+                state = 5
                 cargarTextoIzquierda()
+                time.sleep(20)
+        elif(state == 5):
+            comando = juego(state)
+            print("")
+             
