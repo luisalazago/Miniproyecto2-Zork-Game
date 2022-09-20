@@ -21,7 +21,7 @@ Cuando Jake llegó al pueblo, se encontró con sus viejos amigos, muchos de ello
 le expresaron sus condolencias, pero a Jake no le importaba si eran empáticos, el solo estaba de 
 vuelta por su abuelo. Su “mejor amiga” Martha, le dijo que se podía quedar con ella el tiempo que se 
 fuera a quedar en el pueblo, él agradecido con ella aceptó. Cuando llegaron a la casa de ella, él se 
-quedó en el sofá durmiendo, pero al no poder conciliar el sueño, Jake decide salir a caminar al viejo 
+quedó en el sofá durmiendo, pero al no poder conciliar el sueño, Jake decide salir a caminar al viejo
 parque del pueblo, cuando se sentó en su banca favorita, recordó sus momento de joven con sus amigos, 
 como jugaban con la nieve o con el hielo.
 
@@ -30,12 +30,24 @@ contextura delgada, de seguro un hombre joven, esa figura se fué corriendo del 
 si volver a casa o perseguir al extraño
 
 ======================================================================================================
-Comando disponibles: follow extraño, return home
+Comando disponibles: follow guy, return home
 ======================================================================================================
 
 En la persecución Jake decide si tomar o no un atajo que él conocía.
 
 ======================================================================================================
-Comando disponibles: follow extraño, return home
+Comando disponibles: take atajo, straight
 ======================================================================================================
 
+Jake decidió ir a la vieja panadería del pueblo, dicha panadería la estableció una familia de
+Colombianos, Jake era buen amigo de ellos, pues en su momento más difícil económicamente ellos siempre 
+le tendieron la mano y lo ayudaron como pudieron. Al llegar pidió lo de siempre, un buñuelo relleno de
+queso con un café, hablando con la familia se dio cuenta que el dueño, estaba muy nervioso, nuevamente 
+como si ocultara algo, incluso parecía que le quería decir algo a Jake pero no podía. Entonces Jake 
+decide si dejarlo pasar o enviarle un mensaje una servilleta.
+
+======================================================================================================
+Comando disponibles: send message, go home
+======================================================================================================
+
+Para
