@@ -1,5 +1,6 @@
 """
-Codificación del Misterio de Albus PARTE 1
+Codificación del Misterio de Albus, funciones para cargar la
+historia del juego, jugarlo y ejecutar los sonidos del juego.
 """
 
 from distutils.errors import LibError
@@ -28,7 +29,7 @@ def dprint(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.010)
     
 # Funciones para el final
 def imprimirFinal():
@@ -130,7 +131,7 @@ def juego(state):
             for comando in comandos_niveles[state - 1]:
                 if(x[0] == comando): veracidad = evaluar_comando(x)
         if(not veracidad): break
-        dprint("Comando no reconocido.")
+        dprint("Comando no reconocido.\n")
         x = input("/> ")
         x = x.lower().split()
     return x
@@ -212,9 +213,10 @@ def stateMachine():
             comando = juego(state)
             print("")
             if(comando[1] == "house"):
+                sound(3)
                 cargarTextoIzquierda(True)
                 cargarTextoDerecha(False)
-                time.sleep(20)
+                time.sleep(5)
             elif(comando[1] == "jefatura"):
                 sound(12)
                 cargarTextoDerecha(True)
@@ -226,12 +228,13 @@ def stateMachine():
             print("")
             if(comando[0] == "read"):
                 sound(11)
-                time.sleep(10)
+                time.sleep(5)
                 sound(8)
                 end = False
                 cargarTextoIzquierda(True)
                 imprimirFinal()
             elif(comando[0] == "throw"):
+                sound(13)
                 cargarTextoDerecha(True)
                 cargarTextoIzquierda(False)
                 time.sleep(7)

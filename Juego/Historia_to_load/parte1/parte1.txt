@@ -20,7 +20,7 @@ Comandos disponibles: go alderaan, stay
 Cuando Jake llegó al pueblo, se encontró con sus viejos amigos, muchos de ellos lo saludaron y 
 le expresaron sus condolencias, pero a Jake no le importaba si eran empáticos, el solo estaba de 
 vuelta por su abuelo. Su “mejor amiga” Martha, le dijo que se podía quedar con ella el tiempo que se 
-fuera a quedar en el pueblo, él agradecido con ella aceptó. Cuando llegaron a la casa de ella, él se 
+fuera a quedar en el pueblo, y él, agradecido con ella, aceptó. Cuando llegaron a la casa de ella, él se 
 quedó en el sofá durmiendo, pero al no poder conciliar el sueño, Jake decide salir a caminar al viejo
 parque del pueblo, cuando se sentó en su banca favorita, recordó sus momento de joven con sus amigos, 
 como jugaban con la nieve o con el hielo.
@@ -42,9 +42,9 @@ Comandos disponibles: take atajo, straight
 Jake decidió ir a la vieja panadería del pueblo, dicha panadería la estableció una familia de
 Colombianos, Jake era buen amigo de ellos, pues en su momento más difícil económicamente ellos siempre 
 le tendieron la mano y lo ayudaron como pudieron. Al llegar pidió lo de siempre, un buñuelo relleno de
-queso con un café, hablando con la familia se dio cuenta que el dueño, estaba muy nervioso, nuevamente 
+queso con un café. Hablando con la familia se dió cuenta que el dueño, estaba muy nervioso, nuevamente 
 como si ocultara algo, incluso parecía que le quería decir algo a Jake pero no podía. Entonces Jake 
-decide si dejarlo pasar o enviarle un mensaje una servilleta.
+decide si dejarlo pasar o enviarle un mensaje en una servilleta.
 
 ======================================================================================================
 Comandos disponibles: send message, go home
@@ -53,13 +53,13 @@ Comandos disponibles: send message, go home
 Jake decidió contactar a una periodista, ella lo escuchó y decidió ayudarlo con la información o
 pistas que pudiese conseguir, pues sabía que algo raro estaba pasando. 
 
-Un día cuando Jake estaba revisando las viejas cosas de su abuelo, descubrió que había la foto de su
-madre en un centro psiquiátrico y no sabía de qué año era, pues pareciese de cuando la madre de Jake 
+Un día cuando Jake estaba revisando las viejas cosas de su abuelo, descubrió que había una foto de su
+madre en un centro psiquiátrico y no sabía de qué año era, pues parecía de cuando la madre de Jake 
 era muy joven, básicamente una niña. Pero, también encontró fotos de una persona que él conocía, un 
 viejo amigo del abuelo que se peleó con él por los derechos de un libro que publicó su abuelo. Fue 
 entonces cuando todo en su cabeza hizo click, ya que todo encajaba, el amigo del abuelo estaba detrás 
-de todo y contrató más personas para que hicieran su trabajo sucio, él era la mente maestra, el actor 
-intelectual de todo el plan maestro en contra del abuelo.
+de todo y contrató más personas para que hicieran su trabajo sucio, él era la mente maestra, el autor 
+intelectual de todo el plan para asesinar al abuelo.
 
 Jake no sabía que hacer, estaba en shock con toda la información que estaba procesando, entonces debía
 decidir si ir a la casa del amigo del abuelo o montar la denuncia en la jefatura de policía.
@@ -69,10 +69,9 @@ Comandos disponibles: go house, go jefatura
 ======================================================================================================
 
 La policía al investigar los hechos, encontró pruebas físicas para montar todo un caso y enviarlo a
-juicio. El psiquiatra, al estar involucrado, su coartada era que estuvo en un viaje de negocios
-justamente en los mismo en que pasó todo esto, exceptuando la casa del amigo del abuelo, sin embargo, 
-la coartada del doctor a la horas o momentos en que pasó todo no coinciden con los registros que 
-tiene el hospital, cuando le presentaron los cargos y fue juzgado extrañamente fácil, considerando la 
+juicio. El psiquiatra, al estar involucrado, tenía la coartada de que estuvo en un viaje de negocios
+justamente en los mismos días en que pasó todo esto, exceptuando la casa del amigo del abuelo, 
+sin embargo, la coartada del doctor a las horas o momentos en que pasó todo no coincidía con los registros que tiene el hospital. Cuando le presentaron los cargos y fue juzgado extrañamente fácil, considerando la 
 defensa del doctor, pareciese que algo no terminaba de encajar. Después del juicio, el doctor fue 
 condenado a sentencia de muerte.
 
@@ -84,7 +83,7 @@ Comandos disponibles: read letter, throw
 
 Fue entonces cuando Jake consideró que lo mejor para él era olvidarse de su pueblo, de ese pueblo que
 nunca lo hizo sentir bien y que solo le había traído desgracias. Por eso, debía elegir entre irse del
-pueblo o qudarse un poco más para sanar sus problemas.
+pueblo o quedarse un poco más para sanar sus problemas.
 
 ======================================================================================================
 Comandos disponibles: go out, stay

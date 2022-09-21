@@ -1,3 +1,8 @@
+"""
+Archivo de OpenAL para cargar los sonidos dentro del juego
+con distintos tiempos y manejo de espacios.
+"""
+
 import time
 from openal import * 
 
@@ -55,16 +60,20 @@ def sound(s):
 		source = oalOpen("../Juego/Sonidos/steps.wav")
 		sleepTime = 0
 		config(x_pos,y_pos,z_pos,sleepTime,source)
-	elif sound == 10:
+	elif s == 10:
 		source = oalOpen("../Juego/Sonidos/reporter.wav")
 		sleepTime = 0
 		config(x_pos,y_pos,z_pos,sleepTime,source)
-	elif sound == 11:
+	elif s == 11:
 		source = oalOpen("../Juego/Sonidos/paper.wav")
 		sleepTime = 0
 		config(x_pos,y_pos,z_pos,sleepTime,source)
-	elif sound == 12:
+	elif s == 12:
 		source = oalOpen("../Juego/Sonidos/police.wav")
+		sleepTime = 0
+		config(x_pos,y_pos,z_pos,sleepTime,source)
+	elif s == 13:
+		source = oalOpen("../Juego/Sonidos/throwing.wav")
 		sleepTime = 0
 		config(x_pos,y_pos,z_pos,sleepTime,source)
 	

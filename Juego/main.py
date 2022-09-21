@@ -28,11 +28,10 @@ def main():
         print("Menú de opciones")
         print("__________________________________________________________________")
         print("1) Iniciar nueva partida")
-        print("2) Continuar partida")
-        print("3) Salir del juego")
+        print("2) Salir del juego")
         print("__________________________________________________________________")
         x = int(input("¿Qué opción desea seleccionar?: "))
-        while(x < 1 or x > 3):
+        while(x < 1 or x > 2):
             print("")
             print("Error, por favor seleccione una opción válida")
             x = int(input("¿Qué opción desea seleccionar?: "))
@@ -43,9 +42,6 @@ def main():
             print("")
             time.sleep(5)
             stateMachine()
-        elif(x == 2):
-            print("Continuando partida guardada")
-            time.sleep(5)
         else:
             print("==================================================================")
             print("Gracias por jugar, esperamos que su experiencia haya sido grata")
