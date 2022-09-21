@@ -28,12 +28,28 @@ def sound(s):
 		sleepTime = 1
 		config(x_pos,y_pos,z_pos,sleepTime,source)
 	elif s == 3:
-		source = oalOpen("../Juego/Sonidos/crowd.wav")
+		source = oalOpen("../Juego/Sonidos/crowd_park.wav")
 		sleepTime = 0
 		config(x_pos,y_pos,z_pos,sleepTime,source)
 	elif s == 4:
-		source = oalOpen("../Juego/Sonidos/park.wav")
+		source = oalOpen("../Juego/Sonidos/running.wav")
 		sleepTime = 1
+		config(x_pos,y_pos,z_pos,sleepTime,source)
+	elif s == 5:
+		source = oalOpen("../Juego/Sonidos/breath.wav")
+		sleepTime = 1
+		config(x_pos,y_pos,z_pos,sleepTime,source)
+	elif s == 6:
+		source = oalOpen("../Juego/Sonidos/crowd.wav")
+		sleepTime = 0
+		config(x_pos,y_pos,z_pos,sleepTime,source)
+	elif s == 7:
+		source = oalOpen("../Juego/Sonidos/writing_police.wav")
+		sleepTime = 0
+		config(x_pos,y_pos,z_pos,sleepTime,source)
+	elif s == 8:
+		source = oalOpen("../Juego/Sonidos/end.wav")
+		sleepTime = 0
 		config(x_pos,y_pos,z_pos,sleepTime,source)
 
 	

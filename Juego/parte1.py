@@ -36,9 +36,9 @@ def imprimirFinal():
     """
     system("cls")
     print("======================================================================================================")
-    dprint("FIN DEL JUEGO.")
-    dprint("Esperamos que te haya gustado, recuerda que hay más de un solo final, puedes volver a iniciar y")
-    dprint("recorrer todos los finales que tiene el juego.")
+    dprint("FIN DEL JUEGO.\n")
+    dprint("Esperamos que te haya gustado, recuerda que hay más de un solo final, puedes volver a iniciar y \n")
+    dprint("recorrer todos los finales que tiene el juego.\n")
     print("======================================================================================================")
     time.sleep(7)
 
@@ -159,6 +159,7 @@ def stateMachine():
                 cargarTextoIzquierda()
                 time.sleep(11)
             elif(comando[0] == "stay"):
+                sound(8)
                 end = False
                 cargarTextoDerecha()
                 time.sleep(10)
@@ -166,23 +167,26 @@ def stateMachine():
         elif(state == 2):
             sound(3)
             comando = juego(state)
-            print("")
-            sound(4)  
+            print("")  
             if(comando[0] == "follow"):
+                sound(4)
                 state = 3
                 cargarTextoIzquierda()
                 time.sleep(6)
             elif(comando[0] == "return"):
+                sound(8)
                 end = False
                 cargarTextoDerecha()
                 time.sleep(20)
                 imprimirFinal()
         elif(state == 3):
+            sound(5)
             comando = juego(state)
             print("")
             if(comando[0] == "take"):
+                sound(6)
                 cargarTextoIzquierda()
-                time.sleep(30)
+                time.sleep(2)
             elif(comando[0] == "straight"):
                 cargarTextoDerecha()
                 time.sleep(60)
@@ -193,6 +197,7 @@ def stateMachine():
             if(comando[0] == "go"):
                 cargarTextoDerecha()
             elif(comando[0] == "send"):
+                sound(7)
                 state = 5
                 cargarTextoIzquierda()
                 time.sleep(20)
