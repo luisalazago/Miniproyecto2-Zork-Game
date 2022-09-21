@@ -10,13 +10,15 @@ from OpenAl import *
 # Variables Globales
 comandos_niveles = [
     ["go", "stay"],  ["follow", "return"], 
-    ["take", "straight"], ["send", "go"]
+    ["take", "straight"], ["send", "go"],
+    ["go"], ["read", "throw"], ["go", "stay"]
 ]
 formato_comandos = {
-    "go": [["alderaan", "home"], 1], "stay": [[], 0], 
-    "follow": [["guy"], 1], "return": [["home"], 1],
+    "go": [["alderaan", "home", "out", "house", "jefatura"], 1], 
+    "stay": [[], 0], "follow": [["guy"], 1], "return": [["home"], 1],
     "send": [["message"], 1], "take": [["atajo"], 1],
-    "straight": [[], 0]
+    "straight": [[], 0], "read": [["letter"], 1],
+    "throw": [[], 0]
 } # El formato de los comandos tiene los comandos y una pareja de las palabras que se deben colocar y la cantida de palabras que vienen después de comando que es el entero.
 contador = 0
 contador_derecha = 0
@@ -26,9 +28,8 @@ def dprint(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.035)
+        time.sleep(0)
     
-
 # Funciones para el final
 def imprimirFinal():
     """
@@ -84,7 +85,7 @@ def cargarTexto():
             print(linea)
     contador += 1
 
-def cargarTextoDerecha():
+def cargarTextoDerecha(se_lee):
     """
     Esta función permite cargar las decisiones que se tomen por el
     camino derecho.
@@ -93,13 +94,13 @@ def cargarTextoDerecha():
     archivo = open("../Juego/Historia_to_load/parte1/decision_derecha.txt", "r", encoding = 'utf-8')
     archivo = archivo.readlines()
     archivo = archivo[contador_derecha:]
-    dprint("")
+    if(se_lee): dprint("")
     for linea in archivo:
         contador_derecha += 1
         if(linea[0] == "+"): break
-        dprint(linea)
+        if(se_lee): dprint(linea)
 
-def cargarTextoIzquierda():
+def cargarTextoIzquierda(se_lee):
     """
     Esta función permite cargar la historia por el camino izquierdo.
     """
@@ -107,11 +108,11 @@ def cargarTextoIzquierda():
     archivo = open("../Juego/Historia_to_load/parte1/decision_izquierda.txt", "r", encoding = 'utf-8')
     archivo = archivo.readlines()
     archivo = archivo[contador_izquierda:]
-    dprint("")
+    if(se_lee): dprint("")
     for linea in archivo:
         contador_izquierda += 1
         if(linea[0] == "-"): break
-        dprint(linea)
+        if(se_lee): dprint(linea)
 
 # Funciones para jugar
 def juego(state):
@@ -156,12 +157,13 @@ def stateMachine():
             if(comando[0] == "go"):
                 sound(2)
                 state = 2
-                cargarTextoIzquierda()
+                cargarTextoIzquierda(True)
+                cargarTextoDerecha(False)
                 time.sleep(11)
             elif(comando[0] == "stay"):
                 sound(8)
                 end = False
-                cargarTextoDerecha()
+                cargarTextoDerecha(True)
                 time.sleep(10)
                 imprimirFinal()
         elif(state == 2):
@@ -171,13 +173,14 @@ def stateMachine():
             if(comando[0] == "follow"):
                 sound(4)
                 state = 3
-                cargarTextoIzquierda()
+                cargarTextoIzquierda(True)
+                cargarTextoDerecha(False)
                 time.sleep(6)
             elif(comando[0] == "return"):
                 sound(8)
                 end = False
-                cargarTextoDerecha()
-                time.sleep(20)
+                cargarTextoDerecha(True)
+                time.sleep(30)
                 imprimirFinal()
         elif(state == 3):
             sound(5)
@@ -185,23 +188,62 @@ def stateMachine():
             print("")
             if(comando[0] == "take"):
                 sound(6)
-                cargarTextoIzquierda()
-                time.sleep(2)
+                cargarTextoIzquierda(True)
+                cargarTextoDerecha(False)
+                time.sleep(20)
             elif(comando[0] == "straight"):
-                cargarTextoDerecha()
+                cargarTextoDerecha(True)
+                cargarTextoIzquierda(False)
                 time.sleep(60)
             state = 4
         elif(state == 4):
             comando = juego(state)
             print("")
             if(comando[0] == "go"):
-                cargarTextoDerecha()
+                cargarTextoDerecha(True)
+                cargarTextoIzquierda(False)
+                time.sleep(10)
             elif(comando[0] == "send"):
                 sound(7)
-                state = 5
-                cargarTextoIzquierda()
+                cargarTextoIzquierda(True)
+                cargarTextoDerecha(False)
                 time.sleep(20)
+            state = 5
         elif(state == 5):
             comando = juego(state)
             print("")
+            if(comando[1] == "house"):
+                cargarTextoIzquierda(True)
+                cargarTextoDerecha(False)
+                time.sleep(20)
+            elif(comando[1] == "jefatura"):
+                cargarTextoDerecha(True)
+                cargarTextoIzquierda(False)
+                time.sleep(10)
+            state = 6
+        elif(state == 6):
+            comando = juego(state)
+            print("")
+            if(comando[0] == "read"):
+                end = False
+                cargarTextoIzquierda(True)
+                time.sleep(20)
+                imprimirFinal()
+            elif(comando[0] == "throw"):
+                cargarTextoDerecha(True)
+                cargarTextoIzquierda(False)
+                time.sleep(7)
+                state = 7
+        elif(state == 7):
+            comando = juego(state)
+            print("")
+            if(comando[0] == "go"):
+                cargarTextoIzquierda(True)
+                time.sleep(30)
+            elif(comando[0] == "stay"):
+                cargarTextoDerecha(True)
+                time.sleep(60)
+            end = False
+            imprimirFinal()
+
              

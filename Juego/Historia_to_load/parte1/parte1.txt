@@ -14,7 +14,7 @@ había fallecido, pero nota, según el acta de defunción, que hay incoherencias
 que no cuadran según el estado de muerte...
 
 ======================================================================================================
-Comandos disponibles: go [name], stay
+Comandos disponibles: go alderaan, stay
 ======================================================================================================
 
 Cuando Jake llegó al pueblo, se encontró con sus viejos amigos, muchos de ellos lo saludaron y 
@@ -50,4 +50,42 @@ decide si dejarlo pasar o enviarle un mensaje una servilleta.
 Comandos disponibles: send message, go home
 ======================================================================================================
 
-Para
+Jake decidió contactar a una periodista, ella lo escuchó y decidió ayudarlo con la información o
+pistas que pudiese conseguir, pues sabía que algo raro estaba pasando. 
+
+Un día cuando Jake estaba revisando las viejas cosas de su abuelo, descubrió que había la foto de su
+madre en un centro psiquiátrico y no sabía de qué año era, pues pareciese de cuando la madre de Jake 
+era muy joven, básicamente una niña. Pero, también encontró fotos de una persona que él conocía, un 
+viejo amigo del abuelo que se peleó con él por los derechos de un libro que publicó su abuelo. Fue 
+entonces cuando todo en su cabeza hizo click, ya que todo encajaba, el amigo del abuelo estaba detrás 
+de todo y contrató más personas para que hicieran su trabajo sucio, él era la mente maestra, el actor 
+intelectual de todo el plan maestro en contra del abuelo.
+
+Jake no sabía que hacer, estaba en shock con toda la información que estaba procesando, entonces debía
+decidir si ir a la casa del amigo del abuelo o montar la denuncia en la jefatura de policía.
+
+======================================================================================================
+Comandos disponibles: go house, go jefatura
+======================================================================================================
+
+La policía al investigar los hechos, encontró pruebas físicas para montar todo un caso y enviarlo a
+juicio. El psiquiatra, al estar involucrado, su coartada era que estuvo en un viaje de negocios
+justamente en los mismo en que pasó todo esto, exceptuando la casa del amigo del abuelo, sin embargo, 
+la coartada del doctor a la horas o momentos en que pasó todo no coinciden con los registros que 
+tiene el hospital, cuando le presentaron los cargos y fue juzgado extrañamente fácil, considerando la 
+defensa del doctor, pareciese que algo no terminaba de encajar. Después del juicio, el doctor fue 
+condenado a sentencia de muerte.
+
+Unos días después de la muerte del doctor, le llegó una carta a Jake...
+
+======================================================================================================
+Comandos disponibles: read letter, throw
+======================================================================================================
+
+Fue entonces cuando Jake consideró que lo mejor para él era olvidarse de su pueblo, de ese pueblo que
+nunca lo hizo sentir bien y que solo le había traído desgracias. Por eso, debía elegir entre irse del
+pueblo o qudarse un poco más para sanar sus problemas.
+
+======================================================================================================
+Comandos disponibles: go out, stay
+======================================================================================================
