@@ -51,13 +51,22 @@ def sound(s):
 		source = oalOpen("../Juego/Sonidos/end.wav")
 		sleepTime = 0
 		config(x_pos,y_pos,z_pos,sleepTime,source)
-
+	elif s == 9:
+		source = oalOpen("../Juego/Sonidos/steps.wav")
+		sleepTime = 0
+		config(x_pos,y_pos,z_pos,sleepTime,source)
+	elif sound == 10:
+		source = oalOpen("../Juego/Sonidos/reporter.wav")
+		sleepTime = 0
+		config(x_pos,y_pos,z_pos,sleepTime,source)
+	elif sound == 11:
+		source = oalOpen("../Juego/Sonidos/paper.wav")
+		sleepTime = 0
+		config(x_pos,y_pos,z_pos,sleepTime,source)
+	elif sound == 12:
+		source = oalOpen("../Juego/Sonidos/police.wav")
+		sleepTime = 0
+		config(x_pos,y_pos,z_pos,sleepTime,source)
 	
-	# while True:
-	#     source.set_position([x_pos, y_pos, z_pos])
-	#     print("Playing at: {0}".format(source.position))
-	#     time.sleep(sleep_time)
-	#     x_pos += 0.1
-
 	
     

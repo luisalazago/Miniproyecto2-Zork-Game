@@ -28,7 +28,7 @@ def dprint(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0)
+        time.sleep(0.04)
     
 # Funciones para el final
 def imprimirFinal():
@@ -180,7 +180,6 @@ def stateMachine():
                 sound(8)
                 end = False
                 cargarTextoDerecha(True)
-                time.sleep(30)
                 imprimirFinal()
         elif(state == 3):
             sound(5)
@@ -190,26 +189,26 @@ def stateMachine():
                 sound(6)
                 cargarTextoIzquierda(True)
                 cargarTextoDerecha(False)
-                time.sleep(20)
             elif(comando[0] == "straight"):
+                sound(9)
                 cargarTextoDerecha(True)
                 cargarTextoIzquierda(False)
-                time.sleep(60)
             state = 4
         elif(state == 4):
+            sound(6)
             comando = juego(state)
             print("")
             if(comando[0] == "go"):
+                sound(10)
                 cargarTextoDerecha(True)
                 cargarTextoIzquierda(False)
-                time.sleep(10)
             elif(comando[0] == "send"):
                 sound(7)
                 cargarTextoIzquierda(True)
                 cargarTextoDerecha(False)
-                time.sleep(20)
             state = 5
         elif(state == 5):
+            sound(1)
             comando = juego(state)
             print("")
             if(comando[1] == "house"):
@@ -217,6 +216,7 @@ def stateMachine():
                 cargarTextoDerecha(False)
                 time.sleep(20)
             elif(comando[1] == "jefatura"):
+                sound(12)
                 cargarTextoDerecha(True)
                 cargarTextoIzquierda(False)
                 time.sleep(10)
@@ -225,9 +225,11 @@ def stateMachine():
             comando = juego(state)
             print("")
             if(comando[0] == "read"):
+                sound(11)
+                time.sleep(10)
+                sound(8)
                 end = False
                 cargarTextoIzquierda(True)
-                time.sleep(20)
                 imprimirFinal()
             elif(comando[0] == "throw"):
                 cargarTextoDerecha(True)
@@ -235,15 +237,19 @@ def stateMachine():
                 time.sleep(7)
                 state = 7
         elif(state == 7):
+            sound(1)
             comando = juego(state)
             print("")
             if(comando[0] == "go"):
+                sound(2)
+                time.sleep(5)
+                sound(8)
                 cargarTextoIzquierda(True)
-                time.sleep(30)
             elif(comando[0] == "stay"):
+                sound(8)
                 cargarTextoDerecha(True)
-                time.sleep(60)
             end = False
+            time.sleep(10)
             imprimirFinal()
 
              
